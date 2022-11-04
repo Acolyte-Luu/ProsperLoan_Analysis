@@ -1,45 +1,40 @@
-# Diamonds Data Exploration
+# (ProsperLoan Dataset)
+## by (Kwadwo Addo)
+
 
 ## Dataset
 
-The data consists of information regarding 54,000 round-cut diamonds, including
-price, carat, and other diamond qualities. The dataset can be found in the
-repository for R's ggplot2 library [here](https://github.com/tidyverse/ggplot2/blob/master/data-raw/diamonds.csv),
-with feature documentation available [here](http://ggplot2.tidyverse.org/reference/diamonds.html).
+> This data set contains 113,937 loans with 81 variables on each loan, including loan amount, borrower rate, current loan status, borrower income, and others. The columns I am going to focus on in this exploration are the Term, LoanStatus, BorrowerRate, ProsperScore, IncomeRange, IsBorrowerHomeowner, TotalProsperLoans, ListingCategory, LoanOriginalAmount, EmploymentStatus
 
 
 ## Summary of Findings
 
-In the exploration, I found that there was a strong relationship between the
-price of a diamond and its carat weight, with modifying effects from the cut,
-color, and clarity grades given to the diamond. The relationship is
-approximately linear between price and carat when price is transformed to be on
-a logarithmic scale and carat transformed to be on a cube-root scale. I found a
-somewhat surprising result initially when the marginal trend for the cut, color,
-and clarity variables indicated that higher diamond quality was associated with
-lower price. However, higher diamond quality was also associated with smaller
-diamonds. When I isolated diamonds of a single carat weight, there was a clear
-positive relationship between higher diamond quality and higher diamond price.
+> Summarize all of your findings from your exploration here, whether you plan on bringing them into your explanatory presentation or not.
+Findings in this exploration are as follows.
+1. A large majority of the loans are completed.
+2. Defaulted loans are a minimal compared to completed loans.
+3. A slightly higher number of borrowers are homeowners
+4. A very large majority of borrowers are employed.
+5. A significant number of borrowers are full-time employees, with a very small number of borrowers not employed, retired and part-time workers respectively.
+6. Almost all borrowers have a yearly income of over 24000USD
+7. An almost insignificant number of borrowers earn 0USD.
+8. A small number of borrowers are also unemployed.
+9. Majority of borrowers fall within the score of 4.0 and 9.0. 
+10. There are few borrowers that are on the opposite ends of the ProsperScore
+11. Higher ProsperScores seem to have only borrowers with earnings above 24000 yearly.
+12. There are a lot of completed loans with relatively high loan amounts.
+13. The ProsperScore of 8.0 has the highest number of completed loans, followed by the score of 6.0.
+14. Higher ratings have a low number of individuals that are not employed,retired and part-time
+15. Debt consolidation is the largest type of completed loan.
+16. Debt consolidation is also the type of loan most defaulted.
+17. Most loans have a term of 36 months for both completed and defaulted loans.
+18. Borrowers that are homeowners tend to take loans of higher amounts compared to borrowers that are not homeowners.
+19. Borrowers at the highest ProsperScore 11.0 are all employed with an average of two ProsperLoans.
+20. Student loan terms stay the same whether they defauled or they completed payment for the loan.
 
-Outside of the main variables of interest, I verified the relationship between
-diamond carat weight and its x, y, and z dimensions. For the dataset given,
-there was an interesting interaction in the categorical diamond quality
-features. The lower clarity grades looked like they had slightly better
-distribution of cut and color grades than diamonds with the higher clarity
-grades.
+
 
 
 ## Key Insights for Presentation
 
-For the presentation, I focus on just the influence of the four Cs of diamonds
-and leave out most of the intermediate derivations. I start by introducing the
-price variable, followed by the pattern in carat distribution, then plot the
-transformed scatterplot.
-
-Afterwards, I introduce each of the categorical variables one by one. To start,
-I use the violin plots of price and carat across clarity. I'm only looking at
-the clarity grade plot here since it's the clearest example of how the
-categorical quality grades affect diamond pricing. The other two categorical
-variables, cut and color, are covered afterwards, using point plots. I've made
-sure to use different color palettes for each quality variable to make sure it
-is clear that they're different between plots.
+The visualizations I chose show distribution of the variables, Loan status, ListingCategory and ProsperScore and I tried to tell a story that can predict the loan status at the end of the day.
